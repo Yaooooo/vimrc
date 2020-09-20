@@ -1,8 +1,9 @@
 """""""""""""""""""
 "vim基本设定
 """""""""""""""""""
-set relativenumber
+"set relativenumber
 set nu  "行号
+set mouse=a
 
 set backspace=indent,eol,start "让backspace正常运作
 set nocompatible               " 关闭 vi 兼容模式
@@ -131,6 +132,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'solarnz/thrift.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Valloric/YouCompleteMe'
 
 
 hi pythonSelf  ctermfg=68  guifg=#5f87d7 cterm=bold gui=bold
@@ -169,7 +171,7 @@ autocmd FileType html nnoremap <Leader>b :RunInInteractiveShell<space> open % <C
 """""""""""""""""""
 "autocmd vimenter * NERDTree
 let NERDTreeChDirMode=2 "make sure the working directory is set correctly.
-map <leader>n :NERDTreeToggle<CR>
+map <F7> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
